@@ -17,7 +17,18 @@
 
 <footer><h2>Brand Creator & CEO: Mr. Bilawal</h2><p style="margin-top:8px">RUMI FRAGRANCE</p></footer>
 <script>
-const items=[{n:'Divine',p:2199,img:'images/slide2.jpg'},{n:'Amber',p:2199,img:'images/slide4.jpg'},{n:'Velvet',p:2199,img:'images/slide2.jpg'},{n:'Signature',p:2299,img:'images/slide3.jpg'},{n:'Midnight',p:2499,img:'images/slide3.jpg'},{n:'Noir',p:2499,img:'images/slide1.jpg'},{n:'Majestic',p:2499,img:'images/slide8.jpg'},{n:'Royal Oudh',p:2499,img:'images/slide8.jpg'},{n:'Imperial',p:2999,img:'images/slide1.jpg'},{n:'Oudh',p:2999,img:'images/slide8.jpg'}];
+// AB HAR PERFUME KI APNI SAHI PHOTO LAGAI HAI - NAME = PHOTO
+const items=[
+{n:'Divine',p:2199,img:'images/slide2.jpg'},
+{n:'Amber',p:2199,img:'images/slide4.jpg'},
+{n:'Velvet',p:2199,img:'images/slide6.jpg'},
+{n:'Signature',p:2299,img:'images/slide5.jpg'},
+{n:'Midnight',p:2499,img:'images/slide3.jpg'},
+{n:'Noir',p:2499,img:'images/slide1.jpg'},
+{n:'Majestic',p:2499,img:'images/slide8.jpg'},
+{n:'Royal Oudh',p:2499,img:'images/slide7.jpg'},
+{n:'Imperial',p:2999,img:'images/slide1.jpg'},
+{n:'Oudh',p:2999,img:'images/slide8.jpg'}];
 let idx=0;const slides=document.getElementById('slides');const total=8;let d='';for(let i=0;i<total;i++)d+='<span id="d'+i+'"></span>';document.getElementById('dots').innerHTML=d;
 function move(){idx=(idx+1)%total;slides.style.transform='translateX(-'+(idx*100)+'%)';for(let i=0;i<total;i++)document.getElementById('d'+i).className=i===idx?'active':''}setInterval(move,3000);move();
 document.getElementById('productGrid').innerHTML=items.map(it=>{let disc=Math.round(it.p*0.9);return `<div class="card"><img src="${it.img}"><h3>${it.n}</h3><p>50ML EDP<br><s>PKR ${it.p}</s> <b>PKR ${disc} (10% OFF)</b></p><button class="btn" style="padding:8px 15px;margin-top:8px" onclick="selectAndOrder('${it.n}')">Order Now</button></div>`}).join('');
