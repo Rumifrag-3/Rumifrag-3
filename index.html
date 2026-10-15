@@ -6,7 +6,7 @@
 <header><img src="images/logo.jpg"><h1>RUMI FRAGRANCE</h1><p>A Scent to Remember</p></header>
 <div class="offer">🔥 10% DISCOUNT OFFER - LIMITED TIME! 🔥</div>
 <div class="slider"><div class="slides" id="slides"><img src="images/slide1.jpg"><img src="images/slide2.jpg"><img src="images/slide3.jpg"><img src="images/slide4.jpg"><img src="images/slide5.jpg"><img src="images/slide6.jpg"><img src="images/slide7.jpg"><img src="images/slide8.jpg"></div></div><div class="dots" id="dots"></div>
-<div class="btns"><button class="btn" onclick="showOrder()">🛒 Book Order Online</button><button class="btn dark" onclick="document.getElementById('priceModal').style.display='block'">📋 Perfumes List & Price</button><a class="btn dark" href="https://wa.me/923032559876" target="_blank">WhatsApp 03032559876</a></div>
+<div class="btns"><button class="btn" onclick="showOrder()">🛒 Book Order Online</button><button class="btn dark" onclick="document.getElementById('priceModal').style.display='block'">📋 Perfumes List & Price</button></div>
 <div class="products" id="productGrid"></div>
 <div id="orderBox"><h2 style="color:gold;text-align:center">Book Your Order</h2><input id="cname" placeholder="Apna Naam"><input id="cphone" placeholder="Mobile Number"><input id="caddress" placeholder="Full Address"><select id="pname"></select><input id="qty" type="number" value="1" min="1"><p id="totalShow" style="color:gold;text-align:center;margin:10px 0"></p><button class="btn" style="width:100%" onclick="placeOrder()">Order Confirm - WhatsApp par Bhejen</button></div>
 
@@ -15,7 +15,7 @@
 <img src="images/price1.jpg" onerror="this.style.display='none'"><img src="images/price2.jpg" onerror="this.style.display='none'">
 <br><button class="btn" onclick="document.getElementById('priceModal').style.display='none'">Close</button></div>
 
-<footer><h2>Brand Creator & CEO: Mr. Bilawal</h2><p style="margin-top:8px">RUMI FRAGRANCE • WhatsApp <b style="color:#fff">03032559876</b></p></footer>
+<footer><h2>Brand Creator & CEO: Mr. Bilawal</h2><p style="margin-top:8px">RUMI FRAGRANCE</p></footer>
 <script>
 const items=[{n:'Divine',p:2199,img:'images/slide2.jpg'},{n:'Amber',p:2199,img:'images/slide4.jpg'},{n:'Velvet',p:2199,img:'images/slide2.jpg'},{n:'Signature',p:2299,img:'images/slide3.jpg'},{n:'Midnight',p:2499,img:'images/slide3.jpg'},{n:'Noir',p:2499,img:'images/slide1.jpg'},{n:'Majestic',p:2499,img:'images/slide8.jpg'},{n:'Royal Oudh',p:2499,img:'images/slide8.jpg'},{n:'Imperial',p:2999,img:'images/slide1.jpg'},{n:'Oudh',p:2999,img:'images/slide8.jpg'}];
 let idx=0;const slides=document.getElementById('slides');const total=8;let d='';for(let i=0;i<total;i++)d+='<span id="d'+i+'"></span>';document.getElementById('dots').innerHTML=d;
