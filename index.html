@@ -1,73 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>RUMI FRAGRANCE - A Scent to Remember</title>
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif}
-body{background:#000;color:#fff;overflow-x:hidden}
-.bg{position:fixed;inset:0;background:url('images/bg.jpg') center/cover no-repeat;opacity:.25;z-index:-1}
-#login{position:fixed;inset:0;background:#000;display:flex;align-items:center;justify-content:center;z-index:9999;text-align:center;padding:20px}
-.login-box{background:#111;border:1px solid #c9a227;padding:30px;border-radius:20px;width:100%;max-width:380px}
-.login-box img{width:110px;height:110px;object-fit:cover;border-radius:50%;border:2px solid #c9a227}
-.login-box h1{color:#d4af37;letter-spacing:3px;margin:10px 0 5px}
-.login-box input{width:100%;padding:13px;margin:15px 0;border-radius:10px;border:1px solid #333;background:#222;color:#fff;text-align:center;font-size:16px}
-.login-box button{width:100%;padding:13px;background:#c9a227;color:#000;font-weight:bold;border:none;border-radius:10px;cursor:pointer}
-header{padding:15px;text-align:center;background:rgba(0,0,0,.85);border-bottom:1px solid #c9a227;position:sticky;top:0;z-index:100}
-header img{width:70px;height:70px;border-radius:50%;border:2px solid gold}
-header h1{color:#d4af37;letter-spacing:4px}
-.offer{margin:12px auto;text-align:center;background:#c9a227;color:#000;font-weight:bold;padding:10px;max-width:520px;border-radius:30px;animation:blink 1s infinite}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:.2;transform:scale(1.03)}}
-.slider{width:100%;max-width:550px;height:520px;margin:15px auto;overflow:hidden;border-radius:20px;border:2px solid #c9a227}
-.slides{display:flex;transition:transform.8s ease;height:100%}
-.slides img{width:100%;height:100%;object-fit:cover;flex-shrink:0}
-.dots{text-align:center}.dots span{display:inline-block;width:10px;height:10px;background:#555;border-radius:50%;margin:3px}.dots span.active{background:gold}
-.btns{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;padding:15px}
-.btn{background:gold;color:#000;padding:14px 20px;border-radius:30px;font-weight:bold;text-decoration:none;border:none;cursor:pointer;font-size:15px}
-.btn.dark{background:#222;color:gold;border:1px solid gold}
-h2.sec{text-align:center;color:gold;margin:20px 0 10px}
-.products{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;padding:15px;max-width:800px;margin:auto}
-.card{background:#111;border:1px solid #333;border-radius:15px;padding:10px;text-align:center}
-.card img{width:100%;height:180px;object-fit:cover;border-radius:10px}
-.card h3{color:#d4af37;margin:8px 0 2px}.card p{color:#ccc;font-size:13px}.card s{color:#888}.card b{color:#00e676}
-#orderBox{display:none;background:#111;margin:15px;padding:20px;border-radius:15px;border:1px solid gold;max-width:600px;margin:auto}
-#orderBox input,#orderBox select{width:100%;padding:12px;margin:8px 0;border-radius:8px;background:#222;color:#fff;border:1px solid #444}
-#summary{display:none;background:#111;margin:15px;padding:20px;border-radius:15px;max-width:850px;margin:auto}
-table{width:100%;border-collapse:collapse;font-size:13px}th,td{border:1px solid #444;padding:8px;text-align:left}
-footer{text-align:center;padding:30px;color:#d4af37;background:#0a0a0a;margin-top:20px}
-</style>
-</head>
-<body>
-<div class="bg"></div>
-<div id="login"><div class="login-box"><img src="images/logo.jpg"><h1>RUMI FRAGRANCE</h1><p style="color:#aaa;font-size:13px">A Scent to Remember • Enter Password</p><input type="password" id="pass" placeholder="Password Likhen"><button onclick="checkPass()">ENTER WEBSITE</button><p id="err" style="color:red;margin-top:10px"></p></div></div>
+<style>*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif}body{background:#000;color:#fff;overflow-x:hidden}.bg{position:fixed;inset:0;background:url('images/bg.jpg') center/cover no-repeat;opacity:.25;z-index:-1}header{padding:15px;text-align:center;background:rgba(0,0,0,.85);border-bottom:1px solid #c9a227;position:sticky;top:0;z-index:100}header img{width:70px;height:70px;border-radius:50%;border:2px solid gold}header h1{color:#d4af37;letter-spacing:4px}.offer{margin:12px auto;text-align:center;background:#c9a227;color:#000;font-weight:bold;padding:10px;max-width:520px;border-radius:30px;animation:blink 1s infinite}@keyframes blink{0%,100%{opacity:1}50%{opacity:.2;transform:scale(1.03)}}.slider{width:100%;max-width:550px;height:520px;margin:15px auto;overflow:hidden;border-radius:20px;border:2px solid #c9a227}.slides{display:flex;transition:transform.8s ease;height:100%}.slides img{width:100%;height:100%;object-fit:cover;flex-shrink:0}.dots{text-align:center}.dots span{display:inline-block;width:10px;height:10px;background:#555;border-radius:50%;margin:3px}.dots span.active{background:gold}.btns{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;padding:15px}.btn{background:gold;color:#000;padding:14px 20px;border-radius:30px;font-weight:bold;text-decoration:none;border:none;cursor:pointer;font-size:15px}.btn.dark{background:#222;color:gold;border:1px solid gold}.products{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;padding:15px;max-width:800px;margin:auto}.card{background:#111;border:1px solid #333;border-radius:15px;padding:10px;text-align:center}.card img{width:100%;height:180px;object-fit:cover;border-radius:10px}.card h3{color:#d4af37;margin:8px 0 2px}.card p{color:#ccc;font-size:13px}.card s{color:#888}.card b{color:#00e676}#orderBox{display:none;background:#111;margin:15px;padding:20px;border-radius:15px;border:1px solid gold;max-width:600px;margin:auto}#orderBox input,#orderBox select{width:100%;padding:12px;margin:8px 0;border-radius:8px;background:#222;color:#fff;border:1px solid #444}#priceModal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.9);z-index:999;overflow:auto;padding:20px;text-align:center}#priceModal img{width:100%;max-width:500px;border-radius:15px;margin:10px auto;display:block;border:2px solid gold}footer{text-align:center;padding:30px;color:#d4af37;background:#0a0a0a;margin-top:20px}</style></head>
+<body><div class="bg"></div>
 <header><img src="images/logo.jpg"><h1>RUMI FRAGRANCE</h1><p>A Scent to Remember</p></header>
-<div class="offer">🔥 10% DISCOUNT OFFER - LIMITED TIME! 10% OFF 🔥</div>
-<div class="slider"><div class="slides" id="slides"><img src="images/slide1.jpg"><img src="images/slide2.jpg"><img src="images/slide3.jpg"><img src="images/slide4.jpg"><img src="images/slide5.jpg"><img src="images/slide6.jpg"><img src="images/slide7.jpg"><img src="images/slide8.jpg"></div></div>
-<div class="dots" id="dots"></div>
-<div class="btns"><button class="btn" onclick="showOrder()">🛒 Book Order Online</button><a class="btn dark" href="https://wa.me/923032559876" target="_blank">WhatsApp 03032559876</a><button class="btn dark" onclick="askSummary()">📋 Summary Sheet</button></div>
-
-<h2 class="sec">OFFICIAL PRICE LIST - 50ML EDP</h2>
+<div class="offer">🔥 10% DISCOUNT OFFER - LIMITED TIME! 🔥</div>
+<div class="slider"><div class="slides" id="slides"><img src="images/slide1.jpg"><img src="images/slide2.jpg"><img src="images/slide3.jpg"><img src="images/slide4.jpg"><img src="images/slide5.jpg"><img src="images/slide6.jpg"><img src="images/slide7.jpg"><img src="images/slide8.jpg"></div></div><div class="dots" id="dots"></div>
+<div class="btns"><button class="btn" onclick="showOrder()">🛒 Book Order Online</button><button class="btn dark" onclick="document.getElementById('priceModal').style.display='block'">📋 Perfumes List & Price</button><a class="btn dark" href="https://wa.me/923032559876" target="_blank">WhatsApp 03032559876</a></div>
 <div class="products" id="productGrid"></div>
-
 <div id="orderBox"><h2 style="color:gold;text-align:center">Book Your Order</h2><input id="cname" placeholder="Apna Naam"><input id="cphone" placeholder="Mobile Number"><input id="caddress" placeholder="Full Address"><select id="pname"></select><input id="qty" type="number" value="1" min="1"><p id="totalShow" style="color:gold;text-align:center;margin:10px 0"></p><button class="btn" style="width:100%" onclick="placeOrder()">Order Confirm - WhatsApp par Bhejen</button></div>
-<div id="summary"><h2 style="color:gold">Orders Summary - Owner Only</h2><table><thead><tr><th>Name</th><th>Phone</th><th>Perfume</th><th>Qty</th><th>Total</th><th>Address</th></tr></thead><tbody id="orderList"></tbody></table><br><button class="btn dark" onclick="document.getElementById('summary').style.display='none'">Close</button></div>
-<footer><h2>Brand Creator & CEO: Mr. Bilawal</h2><p>RUMI FRAGRANCE • WhatsApp <b>03032559876</b></p><p style="font-size:12px;color:#777;margin-top:10px">Client ID: 156485624465-b5f9rp18rfs4te500qmmlsh5t55sa0je.apps.googleusercontent.com • Google Drive Connected</p></footer>
+<div id="priceModal"><h2 style="color:gold">OFFICIAL PRICE LIST - RUMI FRAGRANCE</h2><p style="color:#aaa">50ML EDP</p><img src="images/price1.jpg"><img src="images/price2.jpg"><br><button class="btn" onclick="document.getElementById('priceModal').style.display='none'">Close</button></div>
+<footer><h2>Brand Creator & CEO: Mr. Bilawal</h2><p>RUMI FRAGRANCE • WhatsApp <b>03032559876</b></p><p style="font-size:12px;color:#777;margin-top:10px">Google Drive Connected • Client ID: 156485624465-b5f9rp18rfs4te500qmmlsh5t55sa0je.apps.googleusercontent.com</p></footer>
 <script>
-const PASSWORD="Rumi777";
 const items=[{n:'Divine',p:2199,img:'images/slide2.jpg'},{n:'Amber',p:2199,img:'images/slide4.jpg'},{n:'Velvet',p:2199,img:'images/slide2.jpg'},{n:'Signature',p:2299,img:'images/slide3.jpg'},{n:'Midnight',p:2499,img:'images/slide3.jpg'},{n:'Noir',p:2499,img:'images/slide1.jpg'},{n:'Majestic',p:2499,img:'images/slide8.jpg'},{n:'Royal Oudh',p:2499,img:'images/slide8.jpg'},{n:'Imperial',p:2999,img:'images/slide1.jpg'},{n:'Oudh',p:2999,img:'images/slide8.jpg'}];
-function checkPass(){if(document.getElementById('pass').value===PASSWORD){document.getElementById('login').style.display='none'}else{document.getElementById('err').innerText='Galat Password!'}}
-let idx=0;const slides=document.getElementById('slides');const total=8;let dotsHtml='';for(let i=0;i<total;i++)dotsHtml+='<span id="d'+i+'"></span>';document.getElementById('dots').innerHTML=dotsHtml;
+let idx=0;const slides=document.getElementById('slides');const total=8;let d='';for(let i=0;i<total;i++)d+='<span id="d'+i+'"></span>';document.getElementById('dots').innerHTML=d;
 function move(){idx=(idx+1)%total;slides.style.transform='translateX(-'+(idx*100)+'%)';for(let i=0;i<total;i++)document.getElementById('d'+i).className=i===idx?'active':''}setInterval(move,3000);move();
-// Products + Dropdown
 document.getElementById('productGrid').innerHTML=items.map(it=>{let disc=Math.round(it.p*0.9);return `<div class="card"><img src="${it.img}"><h3>${it.n}</h3><p>50ML EDP<br><s>PKR ${it.p}</s> <b>PKR ${disc} (10% OFF)</b></p><button class="btn" style="padding:8px 15px;margin-top:8px" onclick="selectAndOrder('${it.n}')">Order Now</button></div>`}).join('');
 document.getElementById('pname').innerHTML=items.map(it=>`<option value="${it.n}|${it.p}">${it.n} - PKR ${it.p} (10% OFF: PKR ${Math.round(it.p*0.9)})</option>`).join('');
-function updateTotal(){let v=document.getElementById('pname').value.split('|');let q=document.getElementById('qty').value||1;let t=Math.round(v[1]*0.9)*q;document.getElementById('totalShow').innerText='Total after 10% Discount: PKR '+t}
+function updateTotal(){let v=document.getElementById('pname').value.split('|');let q=document.getElementById('qty').value||1;document.getElementById('totalShow').innerText='Total after 10% Discount: PKR '+(Math.round(v[1]*0.9)*q)}
 document.getElementById('pname').onchange=updateTotal;document.getElementById('qty').oninput=updateTotal;updateTotal();
-function selectAndOrder(name){let sel=document.getElementById('pname');for(let i=0;i<sel.options.length;i++){if(sel.options[i].value.startsWith(name)){sel.selectedIndex=i;break}}showOrder();updateTotal()}
+function selectAndOrder(n){let s=document.getElementById('pname');for(let i=0;i<s.options.length;i++)if(s.options[i].value.startsWith(n))s.selectedIndex=i;showOrder();updateTotal()}
 let orders=JSON.parse(localStorage.getItem('rumi_orders')||'[]');
 function showOrder(){document.getElementById('orderBox').style.display='block';document.getElementById('orderBox').scrollIntoView({behavior:'smooth'})}
-function placeOrder(){let name=document.getElementById('cname').value,phone=document.getElementById('cphone').value,addr=document.getElementById('caddress').value,v=document.getElementById('pname').value.split('|'),q=document.getElementById('qty').value;if(!name||!phone){alert('Naam aur Phone zaroori hai');return}let total=Math.round(v[1]*0.9)*q;orders.push({name,phone,p:v[0],q,total,addr});localStorage.setItem('rumi_orders',JSON.stringify(orders));let msg='NEW ORDER - RUMI FRAGRANCE%0AName: '+name+'%0APhone: '+phone+'%0APerfume: '+v[0]+' (50ML)%0AQty: '+q+'%0ATotal (10% OFF): PKR '+total+'%0AAddress: '+addr;window.open('https://wa.me/923032559876?text='+msg,'_blank');alert('Order Save ho gaya aur WhatsApp par bhej diya!')}
-function askSummary(){let p=prompt('Summary Password likhen:');if(p===PASSWORD){document.getElementById('summary').style.display='block';document.getElementById('orderList').innerHTML=orders.map(o=>'<tr><td>'+o.name+'</td><td>'+o.phone+'</td><td>'+o.p+'</td><td>'+o.q+'</td><td>'+o.total+'</td><td>'+o.addr+'</td></tr>').join('')||'<tr><td colspan=6>No Orders Yet</td></tr>'}else alert('Galat Password')}
-</script>
-</body>
-</html>
+function placeOrder(){let name=document.getElementById('cname').value,phone=document.getElementById('cphone').value,addr=document.getElementById('caddress').value,v=document.getElementById('pname').value.split('|'),q=document.getElementById('qty').value;if(!name||!phone){alert('Naam aur Phone zaroori hai');return}let total=Math.round(v[1]*0.9)*q;orders.push({name,phone,p:v[0],q,total,addr,date:new Date().toLocaleString()});localStorage.setItem('rumi_orders',JSON.stringify(orders));let msg='NEW ORDER - RUMI FRAGRANCE%0AName: '+name+'%0APhone: '+phone+'%0APerfume: '+v[0]+'%0AQty: '+q+'%0ATotal (10% OFF): PKR '+total+'%0AAddress: '+addr;window.open('https://wa.me/923032559876?text='+msg,'_blank');alert('Order Save ho gaya aur WhatsApp par bhej diya!')}
+</script></body></html>
